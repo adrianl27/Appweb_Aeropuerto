@@ -17,10 +17,6 @@
             color: white;
         }
 
-        .nv_home{
-            background-color: rgb(68, 33, 223);
-            
-        }
     </style>
 </head>
 <body>
@@ -82,19 +78,20 @@
         <h5 class="mb-3">Cambio de Contraseña</h5>
         <div class="mb-3 col-4">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" class="form-control" id="InputPassAct">
         </div>
         <div class="mb-3 col-4">
             <label for="exampleInputPassword1" class="form-label">Nueva Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" class="form-control" id="InputPasswNew">
         </div>
         <div class="mb-3 col-4 me-5">
             <label for="exampleInputPassword1" class="form-label">Confirmar Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" class="form-control" id="InputPasswNewConf">
         </div>
-        <button class="btn btn-form mb-3 col-md-2">Cambiar Contraseña</button>
+        <button class="btn btn-form mb-3 col-md-2" id="btnCambiarContrasena">Cambiar Contraseña</button>
         <button class="btn btn-form mb-3 col-md-2">Cancelar</button>
       </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="api.js"></script>
 </body>
 </html>
