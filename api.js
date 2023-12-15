@@ -74,3 +74,35 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+function login() {
+    // Obtener los valores del formulario
+    const email = document.getElementById('InputEmailLogin').value;
+    const password = document.getElementById('InputPassLogin').value;
+
+    // Construir el objeto de datos
+    const data = {
+        email,
+        password
+    };
+
+    // Realizar la solicitud POST
+    fetch('https://localhost:7246/api/Usuario', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Aquí puedes manejar la respuesta del servidor
+        console.log('Respuesta:', data);
+
+        // Redirige a la página principal u otra página según tu lógica
+        window.location.href = 'index.html';
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
